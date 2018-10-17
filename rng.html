@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Population Generator</title>
+<style type="text/css">
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #FFD8AD;
+	text-align: center;
+}
+table{
+	width: 100%;
+    table-layout: fixed;
+}
+td {
+	padding: 0px;
+	font-weight: lighter;
+	letter-spacing:-2px;
+	font-size: 30px;
+	border: solid 5px;
+}
+#header{
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+.city{
+	color: #000000;
+	background-color: #FFFFFF;
+	font-style: italic;
+}
+.Q1 {
+	color: #663300;
+	background-color: #BE89BD;
+}
+.Q2 {
+	color: #F37F81;
+	background-color: #F9BABA;
+}
+.Q3 {
+	color: #4AB749;
+	background-color: #C8E4BC;
+}
+.Q4 {
+	color: #00AAD4;
+	background-color: #92D9F8;
+}
+a {
+	font-weight: bolder;
+	font-family: Courier, "Courier New", monospace;
+}
+.buttonStyle {
+	border-radius: 4px;
+	border: thin solid #F0E020;
+	font-size: 30px;
+	padding: 5px;
+	background-color: #F8F094;
+	font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+	font-weight: bold;
+	color: #663300;
+	text-align: center;
+}
+.buttonStyle:hover {
+	border: thin solid #FFCC00;
+	background-color: #FCF9D6;
+	color: #996633;
+	cursor: pointer;
+}
+.buttonStyle:active {
+	border: thin solid #99CC00;
+	background-color: #F5FFD2;
+	color: #669900;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+<button type="button" id="clickButton" class="buttonStyle" onclick="randomize()">Generate New Populace</button>
+<script> 
+var world = [document.getElementsByClassName("0"), document.getElementsByClassName("1"), 
+document.getElementsByClassName("2"), document.getElementsByClassName("3"), 
+document.getElementsByClassName("4"), document.getElementsByClassName("5"), 
+document.getElementsByClassName("6"), document.getElementsByClassName("7"),
+document.getElementsByClassName("8"),document.getElementsByClassName("9")];
+function randomize() {
+	for(var i = 0; i < 10; i++){
+		for(var j = 0; j < 4; j++){
+			world[i][j].innerHTML = 0; //this is where it stops working
+		}
+	}
+	for(var k = 0; k < 400; k++){
+		world[Math.floor(Math.random() * 10)][Math.floor(Math.random() * 4)].innerHTML++;
+	}
+}
+</script>
+<table>
+	<tr id="header">
+		<td>Location</td>
+    	<td>Authoritarian Right</td>
+    	<td>Authoritarian Left</td>
+    	<td>Libertarian Left</td>
+    	<td>Libertarian Right</td>
+  	</tr>
+	<tr>
+		<td class="city">Placeton</td>
+    	<td class="Q1"> <a class="0">10</a> </td>
+    	<td class="Q2"> <a class="0">10</a> </td>
+    	<td class="Q3"> <a class="0">10</a> </td>
+    	<td class="Q4"> <a class="0">10</a> </td>
+  	</tr>
+	<tr>
+		<td class="city">San Lugar</td>
+    	<td class="Q1"> <a class="1">10</a> </td>
+    	<td class="Q2"> <a class="1">10</a> </td>
+    	<td class="Q3"> <a class="1">10</a> </td>
+    	<td class="Q4"> <a class="1">10</a> </td>
+  	</tr>
+	<tr>
+		<td class="city">Hamletville</td>
+    	<td class="Q1"> <a class="2">10</a> </td>
+    	<td class="Q2"> <a class="2">10</a> </td>
+    	<td class="Q3"> <a class="2">10</a> </td>
+    	<td class="Q4"> <a class="2">10</a> </td>
+  	</tr>
+	<tr>
+		<td class="city">Spotburg</td>
+    	<td class="Q1"> <a class="3">10</a> </td>
+    	<td class="Q2"> <a class="3">10</a> </td>
+    	<td class="Q3"> <a class="3">10</a> </td>
+    	<td class="Q4"> <a class="3">10</a> </td>
+  	</tr>
+	<tr>
+		<td class="city">Gorod City</td>
+    	<td class="Q1"> <a class="4">10</a> </td>
+    	<td class="Q2"> <a class="4">10</a> </td>
+    	<td class="Q3"> <a class="4">10</a> </td>
+    	<td class="Q4"> <a class="4">10</a> </td>
+  	</tr>
+	<tr>
+		<td class="city">New Cognomen</td>
+    	<td class="Q1"> <a class="5">10</a> </td>
+    	<td class="Q2"> <a class="5">10</a> </td>
+    	<td class="Q3"> <a class="5">10</a> </td>
+    	<td class="Q4"> <a class="5">10</a> </td>
+  	</tr>
+	<tr>
+		<td class="city">Rural Valley</td>
+    	<td class="Q1"> <a class="6">10</a> </td>
+    	<td class="Q2"> <a class="6">10</a> </td>
+    	<td class="Q3"> <a class="6">10</a> </td>
+    	<td class="Q4"> <a class="6">10</a> </td>
+  	</tr>
+	<tr>
+		<td class="city">Urban Hill</td>
+    	<td class="Q1"> <a class="7">10</a> </td>
+    	<td class="Q2"> <a class="7">10</a> </td>
+    	<td class="Q3"> <a class="7">10</a> </td>
+    	<td class="Q4"> <a class="7">10</a> </td>
+  	</tr>
+	<tr>
+		<td class="city">Suburb Town</td>
+    	<td class="Q1"> <a class="8">10</a> </td>
+    	<td class="Q2"> <a class="8">10</a> </td>
+    	<td class="Q3"> <a class="8">10</a> </td>
+    	<td class="Q4"> <a class="8">10</a> </td>
+  	</tr>
+	<tr>
+		<td class="city">Neighborhoodshire-on-Sea</td>
+    	<td class="Q1"> <a class="9">10</a> </td>
+    	<td class="Q2"> <a class="9">10</a> </td>
+    	<td class="Q3"> <a class="9">10</a> </td>
+    	<td class="Q4"> <a class="9">10</a> </td>
+  	</tr>
+</table>
+</body>
+</html>
